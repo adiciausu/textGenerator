@@ -1,4 +1,7 @@
 from __future__ import print_function
+
+import pprint
+
 from keras.callbacks import LambdaCallback, ModelCheckpoint, EarlyStopping, TensorBoard
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Bidirectional
@@ -9,11 +12,11 @@ import sys
 import io
 
 class Trainer:
-    SEQUENCE_LEN = 40
+    SEQUENCE_LEN = 80
     STEP = 3
     text = None
     model = None
-    chars = None
+    uniqueChars = None
     char_indices = None
     indices_char = None
 
@@ -22,23 +25,22 @@ class Trainer:
             self.text = f.read().lower()
         print('corpus length:', len(self.text))
 
-        self.chars = sorted(list(set(self.text)))
-        print('total chars:', len(self.chars))
-        self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
-        self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
+        self.uniqueChars = sorted(list(set(self.text)))
+        print('total unique chars:', len(self.uniqueChars))
+        self.char_indices = dict((c, i) for i, c in enumerate(self.uniqueChars))
+        self.indices_char = dict((i, c) for i, c in enumerate(self.uniqueChars))
 
-        # cut the text in semi-redundant sequences of maxlen characters
-        sentences = []
+        sequences = []
         next_chars = []
         for i in range(0, len(self.text) - self.SEQUENCE_LEN, self.STEP):
-            sentences.append(self.text[i: i + self.SEQUENCE_LEN])
+            sequences.append(self.text[i: i + self.SEQUENCE_LEN])
             next_chars.append(self.text[i + self.SEQUENCE_LEN])
-        print('nb sequences:', len(sentences))
+        print('sentences count:', len(sequences))
 
         print('Vectorization...')
-        x = np.zeros((len(sentences), self.SEQUENCE_LEN, len(self.chars)), dtype=np.bool)
-        y = np.zeros((len(sentences), len(self.chars)), dtype=np.bool)
-        for i, sentence in enumerate(sentences):
+        x = np.zeros((len(sequences), self.SEQUENCE_LEN, len(self.uniqueChars)), dtype=np.bool)
+        y = np.zeros((len(sequences), len(self.uniqueChars)), dtype=np.bool)
+        for i, sentence in enumerate(sequences):
             for t, char in enumerate(sentence):
                 x[i, t, self.char_indices[char]] = 1
             y[i, self.char_indices[next_chars[i]]] = 1
@@ -47,7 +49,7 @@ class Trainer:
         self.model.fit(x, y, validation_split=0.33, batch_size=128, epochs=60, callbacks=self.build_callbacks())
 
     def build_callbacks(self):
-        checkpoint_path = "./checkpoints/LSTM_LYRICS-epoch{epoch:03d}-sequence%d-" \
+        checkpoint_path = "./checkpoints/text-generator-epoch{epoch:03d}-sequence%d-" \
                           "loss{loss:.4f}-acc{acc:.4f}-val_loss{val_loss:.4f}-val_acc{val_acc:.4f}" % self.SEQUENCE_LEN
         checkpoint_callback = ModelCheckpoint(checkpoint_path, monitor='val_acc', save_best_only=True)
         print_callback = LambdaCallback(on_epoch_end=self.on_epoch_end)
@@ -58,9 +60,9 @@ class Trainer:
 
     def build_model(self):
         model = Sequential()
-        model.add(Bidirectional(LSTM(128), input_shape=(self.SEQUENCE_LEN, len(self.chars))))
+        model.add(Bidirectional(LSTM(128), input_shape=(self.SEQUENCE_LEN, len(self.uniqueChars))))
         model.add(Dropout(0.2))
-        model.add(Dense(len(self.chars), activation='softmax'))
+        model.add(Dense(len(self.uniqueChars), activation='softmax'))
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
         return model
@@ -90,9 +92,10 @@ class Trainer:
             sys.stdout.write(generated)
 
             for i in range(400):
-                x_pred = np.zeros((1, self.SEQUENCE_LEN, len(self.chars)))
+                x_pred = np.zeros((1, self.SEQUENCE_LEN, len(self.uniqueChars)))
                 for t, char in enumerate(sentence):
                     x_pred[0, t, self.char_indices[char]] = 1.
+                print(x_pred)
 
                 preds = self.model.predict(x_pred, verbose=0)[0]
                 next_index = self.sample(preds, diversity)
