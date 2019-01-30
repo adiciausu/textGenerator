@@ -13,7 +13,7 @@ import io
 from keras.utils.data_utils import get_file
 
 class Trainer:
-    SEQUENCE_LEN = 80
+    SEQUENCE_LEN = 40
     STEP = 3
     text = None
     model = None
@@ -61,7 +61,7 @@ class Trainer:
         self.model.fit(x, y, validation_split=0.05, batch_size=128, epochs=60, callbacks=self.build_callbacks())
 
     def build_callbacks(self):
-        checkpoint_path = "./checkpoints/text-generator-epoch{epoch:03d}-sequence%d-" \
+        checkpoint_path = "./data/checkpoints/text-generator-epoch{epoch:03d}-sequence%d-" \
                           "loss{loss:.4f}-acc{acc:.4f}-val_loss{val_loss:.4f}-val_acc{val_acc:.4f}" % self.SEQUENCE_LEN
         checkpoint_callback = ModelCheckpoint(checkpoint_path, monitor='val_acc', save_best_only=True)
         print_callback = LambdaCallback(on_epoch_end=self.on_epoch_end)
@@ -85,6 +85,7 @@ class Trainer:
         exp_preds = np.exp(preds)
         preds = exp_preds / np.sum(exp_preds)
         probas = np.random.multinomial(1, preds, 1)
+
         return np.argmax(probas)
 
     def on_epoch_end(self, epoch, _):

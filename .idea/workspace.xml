@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/textGenerator$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1548855579758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/textGenerator$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1548857126453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/textGenerator$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1548769858163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/text_generator$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1548769002383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="592">
+              <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -79,7 +79,6 @@
       <find>indices_char</find>
       <find>text</find>
       <find>.predict</find>
-      <find>model</find>
       <find>self.text</find>
       <find>sample(</find>
       <find>on_epoch_end</find>
@@ -91,6 +90,8 @@
       <find>rate</find>
       <find>sess</find>
       <find>logs</find>
+      <find>vector</find>
+      <find>model</find>
     </findStrings>
     <replaceStrings>
       <replace>self.chars</replace>
@@ -127,6 +128,17 @@
             <path>
               <item name="textGenerator" type="b2602c69:ProjectViewProjectNode" />
               <item name="textGenerator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="textGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="textGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="textGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="textGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,23 +208,22 @@
       <workItem from="1548761098884" duration="7703000" />
       <workItem from="1548769378969" duration="1935000" />
       <workItem from="1548772419184" duration="331000" />
-      <workItem from="1548772766759" duration="18050000" />
+      <workItem from="1548772766759" duration="22377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28019000" />
+    <option name="totallyTimeSpent" value="32346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43228602" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6424702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.56013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -284,10 +295,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/756815435/numpy/core/_multiarray_umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="7732" column="4" selection-start-line="7732" selection-start-column="4" selection-end-line="7732" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="592">
+          <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
