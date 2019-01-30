@@ -66,7 +66,7 @@ class Trainer:
         checkpoint_callback = ModelCheckpoint(checkpoint_path, monitor='val_acc', save_best_only=True)
         print_callback = LambdaCallback(on_epoch_end=self.on_epoch_end)
         early_stopping = EarlyStopping(monitor='val_acc', patience=10)
-        tb_callback = TensorBoard('logs')
+        tb_callback = TensorBoard(os.path.join('data', 'logs'))
 
         return [print_callback, checkpoint_callback, early_stopping, tb_callback]
 
