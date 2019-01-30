@@ -1,5 +1,7 @@
 from __future__ import print_function
 
+import os
+
 from keras.callbacks import LambdaCallback, ModelCheckpoint, EarlyStopping, TensorBoard
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Bidirectional
@@ -15,11 +17,18 @@ class Trainer:
     STEP = 3
     text = None
     model = None
-    uniqueChars = None
+    unique_chars = None
     char_indices = None
     indices_char = None
 
     def run(self):
+        if not os.path.exists('data'):
+            os.mkdir('data')
+        if not os.path.exists(os.path.join('data', 'logs')):
+            os.mkdir(os.path.join('data', 'logs'))
+        if not os.path.exists(os.path.join('data', 'checkpoints')):
+            os.mkdir(os.path.join('data', 'checkpoints'))
+
         path = get_file(
             'nietzsche.txt',
             origin='https://s3.amazonaws.com/text-datasets/nietzsche.txt')
@@ -28,10 +37,10 @@ class Trainer:
 
         print('corpus length:', len(self.text))
 
-        self.uniqueChars = sorted(list(set(self.text)))
-        print('total unique chars:', len(self.uniqueChars))
-        self.char_indices = dict((c, i) for i, c in enumerate(self.uniqueChars))
-        self.indices_char = dict((i, c) for i, c in enumerate(self.uniqueChars))
+        self.unique_chars = sorted(list(set(self.text)))
+        print('total unique chars:', len(self.unique_chars))
+        self.char_indices = dict((c, i) for i, c in enumerate(self.unique_chars))
+        self.indices_char = dict((i, c) for i, c in enumerate(self.unique_chars))
 
         sequences = []
         next_chars = []
@@ -41,8 +50,8 @@ class Trainer:
         print('sentences count:', len(sequences))
 
         print('Vectorization...')
-        x = np.zeros((len(sequences), self.SEQUENCE_LEN, len(self.uniqueChars)), dtype=np.bool)
-        y = np.zeros((len(sequences), len(self.uniqueChars)), dtype=np.bool)
+        x = np.zeros((len(sequences), self.SEQUENCE_LEN, len(self.unique_chars)), dtype=np.bool)
+        y = np.zeros((len(sequences), len(self.unique_chars)), dtype=np.bool)
         for i, sequence in enumerate(sequences):
             for t, char in enumerate(sequence):
                 x[i, t, self.char_indices[char]] = 1
@@ -63,9 +72,9 @@ class Trainer:
 
     def build_model(self):
         model = Sequential()
-        model.add(Bidirectional(LSTM(128), input_shape=(self.SEQUENCE_LEN, len(self.uniqueChars))))
+        model.add(Bidirectional(LSTM(128), input_shape=(self.SEQUENCE_LEN, len(self.unique_chars))))
         model.add(Dropout(0.2))
-        model.add(Dense(len(self.uniqueChars), activation='softmax'))
+        model.add(Dense(len(self.unique_chars), activation='softmax'))
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
         return model
@@ -90,7 +99,7 @@ class Trainer:
         print('----- Generating with seed: "' + sentence + '"')
 
         for i in range(400):
-            x_pred = np.zeros((1, self.SEQUENCE_LEN, len(self.uniqueChars)))
+            x_pred = np.zeros((1, self.SEQUENCE_LEN, len(self.unique_chars)))
             for t, char in enumerate(sentence):
                 x_pred[0, t, self.char_indices[char]] = 1.
 

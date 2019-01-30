@@ -3,31 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d440c9-d8d8-46f7-afdb-ca19ca30c47c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch001-sequence40-loss3.1097-acc0.1599-val_loss2.9237-val_acc0.1547" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch002-sequence40-loss2.9086-acc0.1886-val_loss2.7715-val_acc0.2107" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch003-sequence40-loss2.7259-acc0.2254-val_loss2.6584-val_acc0.2254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch004-sequence40-loss2.6103-acc0.2487-val_loss2.5759-val_acc0.2522" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch005-sequence40-loss2.5289-acc0.2667-val_loss2.5227-val_acc0.2702" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch006-sequence40-loss2.4715-acc0.2794-val_loss2.4918-val_acc0.2763" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch007-sequence40-loss2.4267-acc0.2901-val_loss2.4666-val_acc0.2788" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch008-sequence40-loss2.3876-acc0.2991-val_loss2.4518-val_acc0.2850" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch010-sequence40-loss2.3226-acc0.3077-val_loss2.4219-val_acc0.2874" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch011-sequence40-loss2.2912-acc0.3180-val_loss2.4163-val_acc0.2891" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch012-sequence40-loss2.2650-acc0.3205-val_loss2.4066-val_acc0.2932" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/LSTM_LYRICS-epoch015-sequence40-loss2.1769-acc0.3453-val_loss2.3926-val_acc0.2985" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/text-generator-epoch001-sequence40-loss3.0991-acc0.1597-val_loss2.9328-val_acc0.1547" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/text-generator-epoch001-sequence40-loss3.1067-acc0.1582-val_loss2.9281-val_acc0.1547" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/text-generator-epoch002-sequence40-loss2.9262-acc0.1862-val_loss2.8211-val_acc0.2026" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/text-generator-epoch003-sequence40-loss2.7702-acc0.2215-val_loss2.6820-val_acc0.2245" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/text-generator-epoch004-sequence40-loss2.6471-acc0.2431-val_loss2.5977-val_acc0.2372" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/text-generator-epoch005-sequence40-loss2.5637-acc0.2578-val_loss2.5458-val_acc0.2498" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548772954.CI00048795" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548776358.CI00048795" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548776429.CI00048795" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548776664.CI00048795" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548777096.CI00048795" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548777477.CI00048795" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548777581.CI00048795" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/events.out.tfevents.1548844304.CI00048795" beforeDir="false" afterPath="$PROJECT_DIR$/logs/events.out.tfevents.1548844304.CI00048795" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="396">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -114,6 +90,8 @@
       <find>self.chars</find>
       <find>batch_size</find>
       <find>sample</find>
+      <find>rate</find>
+      <find>sess</find>
     </findStrings>
     <replaceStrings>
       <replace>self.chars</replace>
@@ -219,22 +197,23 @@
       <workItem from="1548761098884" duration="7703000" />
       <workItem from="1548769378969" duration="1935000" />
       <workItem from="1548772419184" duration="331000" />
-      <workItem from="1548772766759" duration="14539000" />
+      <workItem from="1548772766759" duration="17921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24508000" />
+    <option name="totallyTimeSpent" value="27890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5492958" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43228602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.56013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -308,8 +287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="396">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
