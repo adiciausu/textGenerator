@@ -13,13 +13,12 @@ import io
 from keras.utils.data_utils import get_file
 
 class Trainer:
-    SEQUENCE_LEN = 40
-    STEP = 3
+    SEQUENCE_LEN = 10
+    STEP = 1
     text = None
     model = None
-    unique_chars = None
-    char_indices = None
-    indices_char = None
+    words = None
+    unique_words = None
 
     def run(self):
         if not os.path.exists('data'):
@@ -35,27 +34,30 @@ class Trainer:
         with io.open(path, encoding='utf-8') as f:
             self.text = f.read().lower()
 
-        print('corpus length:', len(self.text))
+        self.words = [w for w in self.text.split(' ') if w.strip() != '' or w == '\n']
+        print('Corpus length in letters:', len(self.text))
+        print('Corpus length in words:', len(self.words))
 
-        self.unique_chars = sorted(list(set(self.text)))
-        print('total unique chars:', len(self.unique_chars))
-        self.char_indices = dict((c, i) for i, c in enumerate(self.unique_chars))
-        self.indices_char = dict((i, c) for i, c in enumerate(self.unique_chars))
+        self.unique_words = sorted(set(self.words))
+        print('Unique words:', len(self.unique_words))
+
+        self.word_indices = dict((c, i) for i, c in enumerate(self.unique_words))
+        self.indices_word = dict((i, c) for i, c in enumerate(self.unique_words))
 
         sequences = []
-        next_chars = []
-        for i in range(0, len(self.text) - self.SEQUENCE_LEN, self.STEP):
-            sequences.append(self.text[i: i + self.SEQUENCE_LEN])
-            next_chars.append(self.text[i + self.SEQUENCE_LEN])
+        next_words = []
+        for i in range(0, len(self.words) - self.SEQUENCE_LEN, self.STEP):
+            sequences.append(self.words[i: i + self.SEQUENCE_LEN])
+            next_words.append(self.words[i + self.SEQUENCE_LEN])
         print('sentences count:', len(sequences))
 
         print('Vectorization...')
-        x = np.zeros((len(sequences), self.SEQUENCE_LEN, len(self.unique_chars)), dtype=np.bool)
-        y = np.zeros((len(sequences), len(self.unique_chars)), dtype=np.bool)
+        x = np.zeros((len(sequences), self.SEQUENCE_LEN, len(self.unique_words)), dtype=np.bool)
+        y = np.zeros((len(sequences), len(self.unique_words)), dtype=np.bool)
         for i, sequence in enumerate(sequences):
-            for t, char in enumerate(sequence):
-                x[i, t, self.char_indices[char]] = 1
-            y[i, self.char_indices[next_chars[i]]] = 1
+            for t, word in enumerate(sequence):
+                x[i, t, self.word_indices[word]] = 1
+            y[i, self.word_indices[next_words[i]]] = 1
 
         self.model = self.build_model()
         self.model.fit(x, y, validation_split=0.05, batch_size=128, epochs=60, callbacks=self.build_callbacks())
@@ -72,9 +74,9 @@ class Trainer:
 
     def build_model(self):
         model = Sequential()
-        model.add(Bidirectional(LSTM(128), input_shape=(self.SEQUENCE_LEN, len(self.unique_chars))))
+        model.add(Bidirectional(LSTM(128), input_shape=(self.SEQUENCE_LEN, len(self.unique_words))))
         model.add(Dropout(0.2))
-        model.add(Dense(len(self.unique_chars), activation='softmax'))
+        model.add(Dense(len(self.unique_words), activation='softmax'))
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
         return model
@@ -98,20 +100,19 @@ class Trainer:
         sentence = self.text[start_index: start_index + self.SEQUENCE_LEN]
         generated += sentence
         print('----- Generating with seed: "' + sentence + '"')
-
         for i in range(400):
-            x_pred = np.zeros((1, self.SEQUENCE_LEN, len(self.unique_chars)))
-            for t, char in enumerate(sentence):
-                x_pred[0, t, self.char_indices[char]] = 1.
+            x_pred = np.zeros((1, self.SEQUENCE_LEN, len(self.unique_words)))
+            for t, word in enumerate(sentence):
+                x_pred[0, t, self.word_indices[word]] = 1.
 
             preds = self.model.predict(x_pred, verbose=0)[0]
             next_index = self.sample(preds)
-            next_char = self.indices_char[next_index]
+            next_word = self.indices_word[next_index]
 
-            generated += next_char
-            sentence = sentence[1:] + next_char
+            generated += next_word
+            sentence = sentence[1:] + next_word
 
-            sys.stdout.write(next_char)
+            sys.stdout.write(next_word)
             sys.stdout.flush()
         print()
 
