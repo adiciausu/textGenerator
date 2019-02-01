@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d440c9-d8d8-46f7-afdb-ca19ca30c47c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch001-sequence80-loss2.4830-acc0.2957-val_loss2.1242-val_acc0.3905" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch002-sequence80-loss2.0841-acc0.3912-val_loss1.9100-val_acc0.4370" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch003-sequence80-loss1.9342-acc0.4290-val_loss1.8038-val_acc0.4589" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch004-sequence80-loss1.8441-acc0.4529-val_loss1.7291-val_acc0.4815" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch005-sequence80-loss1.7751-acc0.4718-val_loss1.6825-val_acc0.4955" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch006-sequence80-loss1.7236-acc0.4866-val_loss1.6362-val_acc0.5076" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch007-sequence80-loss1.6802-acc0.4979-val_loss1.6076-val_acc0.5202" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch008-sequence80-loss1.6464-acc0.5076-val_loss1.5781-val_acc0.5281" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch009-sequence80-loss1.6161-acc0.5164-val_loss1.5571-val_acc0.5344" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch010-sequence80-loss1.5888-acc0.5228-val_loss1.5459-val_acc0.5397" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch011-sequence80-loss1.5662-acc0.5301-val_loss1.5287-val_acc0.5417" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch012-sequence80-loss1.5394-acc0.5362-val_loss1.5142-val_acc0.5475" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch013-sequence80-loss1.5191-acc0.5431-val_loss1.5142-val_acc0.5480" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/checkpoints/text-generator-epoch014-sequence80-loss1.4998-acc0.5494-val_loss1.5009-val_acc0.5508" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/events.out.tfevents.1548857135.CI00048795" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/textGenerator$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1548863281925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/textGenerator$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1549032183419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/textGenerator$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1548769858163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/text_generator$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1548769002383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -35,11 +21,56 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+            <state relative-caret-position="306">
+              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/utils/generic_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="164" selection-start-line="164" selection-end-line="164" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="1038" selection-start-line="1038" selection-end-line="1038" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/callbacks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_arrays.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="216" selection-start-line="216" selection-end-line="216" />
             </state>
           </provider>
         </entry>
@@ -49,24 +80,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="759">
               <caret line="2135" selection-start-line="2135" selection-end-line="2135" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/756815435/numpy/random/mtrand.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-134">
-              <caret line="1192" column="4" selection-start-line="1192" selection-start-column="4" selection-end-line="1192" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="1114" column="8" selection-start-line="1114" selection-start-column="8" selection-end-line="1114" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -82,10 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>with seed</find>
-      <find>[</find>
-      <find>https://Versuri.ro/w/v2b7</find>
-      <find>maxlen</find>
       <find>historyEraser</find>
       <find>tb</find>
       <find>char_indices</find>
@@ -109,6 +118,13 @@
       <find>vector</find>
       <find>indices_word</find>
       <find>indices_word</find>
+      <find>optimi</find>
+      <find>.fit</find>
+      <find>.zeros</find>
+      <find>.compile</find>
+      <find>zeros</find>
+      <find>sparse_categorical_crossentropy</find>
+      <find>acc</find>
     </findStrings>
     <replaceStrings>
       <replace>self.chars</replace>
@@ -127,8 +143,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1787" />
+    <option name="y" value="23" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -145,11 +161,6 @@
             <path>
               <item name="textGenerator" type="b2602c69:ProjectViewProjectNode" />
               <item name="textGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="textGenerator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="textGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,12 +230,21 @@
       <workItem from="1548761098884" duration="7703000" />
       <workItem from="1548769378969" duration="1935000" />
       <workItem from="1548772419184" duration="331000" />
-      <workItem from="1548772766759" duration="25513000" />
+      <workItem from="1548772766759" duration="38892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35482000" />
+    <option name="totallyTimeSpent" value="48861000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -235,11 +255,11 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6424702" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.50270855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.56013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -272,13 +292,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/4OHTVQUF/train.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="1114" column="8" selection-start-line="1114" selection-start-column="8" selection-end-line="1114" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -293,9 +306,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/756815435/numpy/core/_multiarray_umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="7732" column="4" selection-start-line="7732" selection-start-column="4" selection-end-line="7732" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/756815435/numpy/random/mtrand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
+        <state relative-caret-position="121">
           <caret line="1192" column="4" selection-start-line="1192" selection-start-column="4" selection-end-line="1192" selection-end-column="4" />
         </state>
       </provider>
@@ -307,17 +327,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/756815435/numpy/core/_multiarray_umath.py">
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/string.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="7732" column="4" selection-start-line="7732" selection-start-column="4" selection-end-line="7732" selection-end-column="4" />
+        <state relative-caret-position="298">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/756815435/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="5082" column="8" selection-start-line="5082" selection-start-column="8" selection-end-line="5082" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/utils/generic_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_arrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="1038" selection-start-line="1038" selection-end-line="1038" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+        <state relative-caret-position="306">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
