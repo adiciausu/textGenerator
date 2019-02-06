@@ -12,12 +12,13 @@ import numpy as np
 import random
 import sys
 import io
-from keras.utils.data_utils import get_file
+
+from keras.utils import get_file
 
 class Trainer:
     SEQUENCE_LEN = 10
     STEP = 1
-    EMBEDING_SIZE = 1024
+    EMBEDING_SIZE = 512
 
     text = None
     model = None
@@ -32,9 +33,10 @@ class Trainer:
         if not os.path.exists(os.path.join('data', 'checkpoints')):
             os.mkdir(os.path.join('data', 'checkpoints'))
 
-        path = get_file(
-            'nietzsche.txt',
-            origin='https://s3.amazonaws.com/text-datasets/nietzsche.txt')
+        #path = get_file(
+            # 'nietzsche.txt',
+            # origin='https://s3.amazonaws.com/text-datasets/nietzsche.txt')
+        path="parazitii.txt"
         with io.open(path, encoding='utf-8') as f:
             self.text = f.read().lower()
 
@@ -58,8 +60,8 @@ class Trainer:
         print('batch count:', batch_size)
 
         print('Vectorization...')
-        x = np.zeros((batch_size, self.SEQUENCE_LEN), dtype=np.bool)
-        y = np.zeros((batch_size), dtype=np.bool)
+        x = np.zeros((batch_size, self.SEQUENCE_LEN), dtype=np.int32)
+        y = np.zeros((batch_size), dtype=np.int32)
         for i, sequence in enumerate(batches):
             for t, word in enumerate(sequence):
                 x[i, t] = self.word_indices[word]
