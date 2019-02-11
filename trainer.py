@@ -8,17 +8,18 @@ from keras.callbacks import LambdaCallback, ModelCheckpoint, EarlyStopping, Tens
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Bidirectional, Activation, Embedding
 from keras.layers import LSTM
+from keras.utils import to_categorical
+
 import numpy as np
 import random
 import sys
 import io
 
-from keras.utils import get_file
 
 class Trainer:
     SEQUENCE_LEN = 10
     STEP = 1
-    EMBEDING_SIZE = 512
+    EMBEDING_SIZE = 128
 
     text = None
     model = None
@@ -33,15 +34,13 @@ class Trainer:
         if not os.path.exists(os.path.join('data', 'checkpoints')):
             os.mkdir(os.path.join('data', 'checkpoints'))
 
-        #path = get_file(
-            # 'nietzsche.txt',
-            # origin='https://s3.amazonaws.com/text-datasets/nietzsche.txt')
-        path="parazitii.txt"
+        path = "big.txt"
         with io.open(path, encoding='utf-8') as f:
             self.text = f.read().lower()
 
         translator = str.maketrans('', '', string.punctuation)
-        self.words = [re.sub(r'\W+', '', w) for w in self.text.lower().translate(translator).split() if w.strip() != '' or w == '\n']
+        self.words = [re.sub(r'\W+', '', w) for w in self.text.lower().translate(translator).split() if
+                      w.strip() != '' or w == '\n']
         print('Corpus length in letters:', len(self.text))
         print('Corpus length in words:', len(self.words))
 
@@ -68,14 +67,14 @@ class Trainer:
             y[i] = self.word_indices[next_words[i]]
 
         self.model = self.build_model()
-        self.model.fit(x, y, validation_split=0.05, batch_size=128, epochs=60, callbacks=self.build_callbacks())
+        self.model.fit(x, y, validation_split=0.1, batch_size=128, epochs=60, callbacks=self.build_callbacks())
 
     def build_callbacks(self):
         checkpoint_path = "./data/checkpoints/text-generator-epoch{epoch:03d}-sequence%d-" \
                           "loss{loss:.4f}-acc{acc:.4f}-val_loss{val_loss:.4f}-val_acc{val_acc:.4f}" % self.SEQUENCE_LEN
         checkpoint_callback = ModelCheckpoint(checkpoint_path, monitor='val_acc', save_best_only=True)
         print_callback = LambdaCallback(on_epoch_end=self.on_epoch_end)
-        early_stopping = EarlyStopping(monitor='val_acc', patience=10)
+        early_stopping = EarlyStopping(monitor='val_acc', patience=100)
         tb_callback = TensorBoard(os.path.join('data', 'logs'))
 
         return [print_callback, checkpoint_callback, early_stopping, tb_callback]
@@ -126,6 +125,7 @@ class Trainer:
             sys.stdout.write(next_word + " ")
             sys.stdout.flush()
         print()
+
 
 if __name__ == '__main__':
     runner = Trainer()
