@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d440c9-d8d8-46f7-afdb-ca19ca30c47c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/big.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/creanga.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big.txt" beforeDir="false" afterPath="$PROJECT_DIR$/big.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/events.out.tfevents.1549889150.CI00048795" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,17 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/textGenerator$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1549889102440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/textGenerator$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1549983602809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/textGenerator$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1548769858163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/text_generator$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1548769002383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+            <state relative-caret-position="282">
+              <caret line="82" selection-start-line="82" selection-end-line="83" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -32,20 +33,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="17">
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/utils/np_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
+            <state relative-caret-position="476">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/legacy/interfaces.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -53,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="137">
               <caret line="137" selection-start-line="137" selection-end-line="137" />
             </state>
           </provider>
@@ -62,53 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/big.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53926">
-              <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/creanga.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
-              <caret line="4238" column="894" selection-start-line="4238" selection-start-column="894" selection-end-line="4238" selection-end-column="894" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/callbacks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_arrays.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3417">
-              <caret line="216" selection-start-line="216" selection-end-line="216" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/macanache.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36295">
-              <caret line="2135" selection-start-line="2135" selection-end-line="2135" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parazitii.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45821">
-              <caret line="9750" column="35" selection-start-line="9750" selection-start-column="35" selection-end-line="9750" selection-end-column="35" />
+            <state relative-caret-position="272">
+              <caret line="16" column="144" selection-start-line="16" selection-start-column="144" selection-end-line="16" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -124,25 +98,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>random</find>
-      <find>chars</find>
-      <find>indices_char</find>
-      <find>text</find>
-      <find>.predict</find>
-      <find>self.text</find>
-      <find>sample(</find>
-      <find>on_epoch_end</find>
-      <find>SEQUENCE_LEN</find>
-      <find>self.chars</find>
-      <find>batch_size</find>
-      <find>sample</find>
-      <find>rate</find>
-      <find>sess</find>
-      <find>logs</find>
-      <find>model</find>
       <find>vector</find>
       <find>indices_word</find>
-      <find>optimi</find>
       <find>.fit</find>
       <find>.compile</find>
       <find>zeros</find>
@@ -153,7 +110,24 @@
       <find>haz de</find>
       <find>step</find>
       <find>build_model</find>
+      <find>vocabulary</find>
       <find>EMBEDING_SIZE</find>
+      <find>.words</find>
+      <find>word_indices</find>
+      <find>u</find>
+      <find>unique</find>
+      <find>STEP</find>
+      <find>log</find>
+      <find>categorical_crossentropy</find>
+      <find>texts_to_sequences</find>
+      <find>sample</find>
+      <find>optimi</find>
+      <find>pad</find>
+      <find>vocabulary_size</find>
+      <find>input_length</find>
+      <find>steps_per_epoch</find>
+      <find>grams</find>
+      <find>cross</find>
     </findStrings>
     <replaceStrings>
       <replace>self.chars</replace>
@@ -170,15 +144,17 @@
         <option value="$PROJECT_DIR$/parazitii.txt" />
         <option value="$PROJECT_DIR$/creanga.txt" />
         <option value="$PROJECT_DIR$/big.txt" />
+        <option value="$PROJECT_DIR$/big2.txt" />
         <option value="$PROJECT_DIR$/trainer.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-1831" />
+    <option name="y" value="78" />
+    <option name="width" value="1918" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,7 +174,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,11 +245,12 @@
       <workItem from="1548772419184" duration="331000" />
       <workItem from="1548772766759" duration="53128000" />
       <workItem from="1549378779264" duration="30576000" />
+      <workItem from="1549967019274" duration="14340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93673000" />
+    <option name="totallyTimeSpent" value="108013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -288,13 +265,13 @@
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27345416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.117803834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44637054" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.56013" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44637054" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49945828" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
@@ -302,12 +279,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.47020584" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.47020584" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.4488273" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -370,13 +347,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/4OHTVQUF/train.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="469" column="4" selection-start-line="469" selection-start-column="4" selection-end-line="469" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -412,6 +382,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dickens/metadata.tsv" />
+    <entry file="file://$PROJECT_DIR$/dickens/98-0.txt" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/utils/generic_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/layers/embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19278">
+          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/creanga.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72046">
+          <caret line="4238" column="894" selection-start-line="4238" selection-start-column="894" selection-end-line="4238" selection-end-column="894" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/callbacks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -426,91 +433,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/macanache.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36295">
-          <caret line="2135" selection-start-line="2135" selection-end-line="2135" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parazitii.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45821">
+        <state relative-caret-position="165750">
           <caret line="9750" column="35" selection-start-line="9750" selection-start-column="35" selection-end-line="9750" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dickens/metadata.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dickens/98-0.txt">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275831" />
+        <state relative-caret-position="144">
+          <caret line="537" selection-start-line="537" selection-end-line="537" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/big.txt">
+    <entry file="file://$PROJECT_DIR$/macanache.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53926">
-          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="196">
+          <caret line="1949" selection-start-line="1949" selection-end-line="1949" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="824" column="8" selection-start-line="824" selection-start-column="8" selection-end-line="824" selection-end-column="8" />
+        <state relative-caret-position="144">
+          <caret line="951" selection-start-line="951" selection-end-line="951" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/utils/generic_utils.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/framework/errors_impl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/creanga.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="844">
-          <caret line="4238" column="894" selection-start-line="4238" selection-start-column="894" selection-end-line="4238" selection-end-column="894" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/layers/embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        <state relative-caret-position="736">
+          <caret line="532" selection-start-line="532" selection-end-line="532" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="137">
           <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/legacy/interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="144">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://$PROJECT_DIR$/big_validation.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/engine/training_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
+        <state relative-caret-position="144">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/big.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="144" selection-start-line="16" selection-start-column="144" selection-end-line="16" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/big2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="121309" column="27" selection-start-line="93037" selection-end-line="121309" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/keras/utils/np_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        <state relative-caret-position="282">
+          <caret line="82" selection-start-line="82" selection-end-line="83" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
