@@ -52,7 +52,7 @@ class Trainer:
             sequences = []
             for line in self.corpus_lines:
                 token_list = self.tokenizer.texts_to_sequences([line])[0]
-                for i in range(10, len(token_list), 2):
+                for i in range(1, len(token_list), 3):
                     n_gram_sequence = token_list[:i + 1]
                     sequences.append(n_gram_sequence)
 
