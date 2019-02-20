@@ -15,6 +15,13 @@ from keras.utils import to_categorical
 import numpy as np
 import io
 
+# @todo?
+# multiple lstms 256, keep_sequances TRUE
+# data with 30 words, sliding window
+# bigger dropout, smaller learning rate
+# predefined embedding (word to vec?) https://medium.com/@david.campion/text-generation-using-bidirectional-lstm-and-doc2vec-models-3-3-4d192a4c47ba
+
+
 class Trainer:
     EMBEDING_SIZE = 128
 
@@ -51,9 +58,9 @@ class Trainer:
 
             sequences = []
             for line in self.corpus_lines:
-                token_list = self.tokenizer.texts_to_sequences([line])[0]
-                for i in range(1, len(token_list), 3):
-                    n_gram_sequence = token_list[:i + 1]
+                encoded_token_list = self.tokenizer.texts_to_sequences([line])[0]
+                for i in range(1, len(encoded_token_list), 3):
+                    n_gram_sequence = encoded_token_list[:i + 1]
                     sequences.append(n_gram_sequence)
 
             self.sequence_size = max([len(x) for x in sequences])
